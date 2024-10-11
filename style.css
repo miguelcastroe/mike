@@ -29,7 +29,7 @@ body {
 
 .column {
     padding: 10px;
-    border-right: 1px dotted #444; /* To simulate the ASCII table-like structure */
+    border-right: 1px dotted #444; /* To simulate ASCII table-like structure */
     white-space: pre-wrap; /* Keep the whitespace as in the <pre> */
 }
 
