@@ -15,18 +15,23 @@ body {
 
 .container {
     display: flex;
-    width: 80%;
-    height: 80%;
+    flex-direction: row; /* Ensures two-column layout */
+    width: 90%; /* Adjust width for better fit */
+    height: 80%; /* Adjust height for a better proportion */
 }
 
 .left-column {
-    width: 50%;
-    padding: 20px;
+    width: 45%; /* Narrower width for left column */
+    padding: 40px; /* Adds space around the text */
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .logo {
     font-size: 40px;
+    margin-bottom: 20px; /* Adds space below the logo */
 }
 
 .logo i {
@@ -36,6 +41,7 @@ body {
 .tagline p {
     margin: 20px 0;
     font-size: 18px;
+    line-height: 1.6; /* Better line spacing */
 }
 
 h2 {
@@ -45,6 +51,7 @@ h2 {
 
 .work-list {
     list-style: none;
+    padding-left: 0; /* Removes default list padding */
 }
 
 .work-list li {
@@ -57,7 +64,7 @@ h2 {
 
 .work-list i {
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .work-list h3 {
@@ -66,26 +73,29 @@ h2 {
 }
 
 .right-column {
-    width: 50%;
+    width: 55%; /* Wider right column for better balance */
     background-color: #000;
     position: relative;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .headline h1 {
     color: #f7d917;
     font-size: 48px;
     font-weight: bold;
+    text-align: center;
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensures text is on top of the background */
 }
 
 .background-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    z-index: 1; /* Sends background image behind the text */
 }
 
 .cta-button {
