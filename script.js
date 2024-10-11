@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d');
 let width, height;
 let charWidth = 10;
 let charHeight = 18;
-const chars = ['.', ',', '~', '-', '+', '*', '=', '^', '`', "'", ':'];
+const chars = ['.', ',', '~', '-', '+', '*', '=', '^', '`', "'"];
 
 function resizeCanvas() {
     width = window.innerWidth;
@@ -25,10 +25,14 @@ function drawWave() {
     ctx.font = `${charHeight}px monospace`;
 
     const time = Date.now() * 0.002;
+
     for (let y = 0; y < height; y += charHeight) {
         for (let x = 0; x < width; x += charWidth) {
-            const noise = Math.sin(x * 0.05 + time) + Math.sin(y * 0.05 + time);
-            if (Math.random() > 0.5 + noise * 0.1) {
+            // Generate a noise-like effect for random placement
+            const noise = Math.sin(x * 0.02 + time) * Math.cos(y * 0.02 + time);
+
+            // Random threshold to create organic, sparse waves
+            if (Math.random() > 0.8 + noise * 0.2) {
                 ctx.fillText(randomChar(), x, y);
             }
         }
