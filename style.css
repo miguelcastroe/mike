@@ -1,120 +1,100 @@
-body {
+* {
     margin: 0;
-    font-family: 'Arial Black', Arial, sans-serif;
-    background-color: #000;
-    color: #ffffff;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
 }
 
 .container {
     display: flex;
-    flex-wrap: nowrap;
-    height: 100vh;
-    width: 100%;
+    width: 80%;
+    height: 80%;
 }
 
-/* Left Column */
 .left-column {
-    flex: 1;
-    padding: 2rem;
-    background-color: #000;
-    color: #fff;
+    width: 50%;
+    padding: 20px;
+    background-color: #fff;
 }
 
-.branding {
-    font-size: 3rem;
+.logo {
+    font-size: 40px;
 }
 
-.description {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    max-width: 500px;
+.logo i {
+    font-size: 48px;
 }
 
-.featured-work {
-    margin-top: 3rem;
+.tagline p {
+    margin: 20px 0;
+    font-size: 18px;
 }
 
-.featured-work h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.work-item {
-    margin-bottom: 1.5rem;
+.work-list {
+    list-style: none;
 }
 
-.work-description {
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-.work-client {
-    font-size: 1.5rem;
-    border-bottom: 2px solid #ffffff;
-    padding-bottom: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-/* Right Column */
-.right-column {
-    flex: 1;
-    position: relative;
-    background: url('ball.webp') center/cover no-repeat, #000;
+.work-list li {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #ff0;
-    padding: 2rem;
-    animation: changeBackground 12s infinite;
 }
 
-.headline {
-    font-size: 5rem;
+.work-list i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.work-list h3 {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.right-column {
+    width: 50%;
+    background-color: #000;
+    position: relative;
+    text-align: center;
+}
+
+.headline h1 {
+    color: #f7d917;
+    font-size: 48px;
     font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.1;
-    max-width: 500px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cta-button {
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-}
-
-.cta-button button {
-    background-color: #ffffff;
-    color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
+    bottom: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 10px 20px;
     border: none;
-    padding: 1rem 2rem;
+    font-size: 18px;
     cursor: pointer;
-    border-radius: 50px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.cta-button button:hover {
-    background-color: #ff0;
-    color: #000;
-}
-
-/* Background Animation */
-@keyframes changeBackground {
-    0% {
-        background: url('ball.webp') center/cover no-repeat, #000;
-    }
-    33% {
-        background: url('dog.webp') center/cover no-repeat, #000;
-    }
-    66% {
-        background: url('skate.webp') center/cover no-repeat, #000;
-    }
-    100% {
-        background: url('ball.webp') center/cover no-repeat, #000;
-    }
 }
