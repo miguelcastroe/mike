@@ -1,13 +1,13 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #000;
+    font-family: 'Arial Black', Arial, sans-serif;
+    background-color: #000;
+    color: #ffffff;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     height: 100vh;
     width: 100%;
 }
@@ -16,8 +16,8 @@ body {
 .left-column {
     flex: 1;
     padding: 2rem;
-    background-color: #ffffff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
 }
 
 .branding {
@@ -51,16 +51,17 @@ body {
 }
 
 .work-client {
-    font-size: 1.3rem;
-    border-bottom: 2px solid #000;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ffffff;
     padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 /* Right Column */
 .right-column {
     flex: 1;
     position: relative;
-    background: #f5f5f5 url('your-image-path.jpg') center/cover no-repeat;
+    background: url('ball.webp') center/cover no-repeat, #000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,10 +69,11 @@ body {
     text-align: center;
     color: #ff0;
     padding: 2rem;
+    animation: changeBackground 12s infinite;
 }
 
 .headline {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.1;
@@ -85,15 +87,34 @@ body {
 }
 
 .cta-button button {
-    background-color: #000;
-    color: #fff;
-    font-size: 1.2rem;
+    background-color: #ffffff;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
     border: none;
     padding: 1rem 2rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .cta-button button:hover {
-    background-color: #444;
+    background-color: #ff0;
+    color: #000;
+}
+
+/* Background Animation */
+@keyframes changeBackground {
+    0% {
+        background: url('ball.webp') center/cover no-repeat, #000;
+    }
+    33% {
+        background: url('dog.webp') center/cover no-repeat, #000;
+    }
+    66% {
+        background: url('skate.webp') center/cover no-repeat, #000;
+    }
+    100% {
+        background: url('ball.webp') center/cover no-repeat, #000;
+    }
 }
